@@ -11,7 +11,8 @@ function myFunction() {
   var grade;
   var greeting;
   grade = parseFloat(document.getElementById("Mygrade").value);
-  if (grade < 60) {
+  if(grade <= 100){
+  	if (grade < 60) {
     greeting = "false";
   } else {
     greeting = "great";
@@ -22,6 +23,13 @@ function myFunction() {
 		ctx.fillStyle= "#000";	
 		ctx.clearRect(70,150,100,-100);	
         ctx.fillRect(70,150,100,-grade);
+  }else{
+  	document.getElementById("demo").innerHTML = "over";
+  	var c = document.getElementById("mycanvas");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle= "#000";	
+  	ctx.clearRect(70,150,100,-100);	
+  }
 }	
 </script>
 <button onclick="myFunction()">check</button>
