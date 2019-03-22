@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>hello</h1>
+<p>請輸入成績</p>
+<meta charset="utf-8">
+<input type = "number" id="Mygrade" value=0>
+<p id="demo">unknow</p>
+<script>
+function myFunction() {
+  var grade;
+  var greeting;
+  grade = parseFloat(document.getElementById("Mygrade").value);
+  if (grade < 60) {
+    greeting = "false";
+  } else {
+    greeting = "great";
+  }
+  document.getElementById("demo").innerHTML = greeting;
+  var c = document.getElementById("mycanvas");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle= "#000";	
+		ctx.clearRect(70,150,100,-100);	
+        ctx.fillRect(70,150,100,-grade);
+}	
+</script>
+<button onclick="myFunction()">check</button>
+<canvas id="mycanvas" width="250" height="150" style="border:1px
+solid #d3d3d3;">
+</body>
+</html>
