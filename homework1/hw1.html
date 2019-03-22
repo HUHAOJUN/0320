@@ -35,11 +35,17 @@
 		y = parseFloat(document.getElementById("Mydata2").value);
 		document.getElementById("result").innerHTML = x / y;
 	}
+	function c(){
+		document.getElementById('Mydata').value = "";
+		document.getElementById('Mydata2').value = "";
+        document.getElementById('result').value = "";
+	}
 </script>
 <button onclick="add()">加</button>
 <button onclick="minus()">減</button>
 <button onclick="mult()">乘</button>
 <button onclick="div()">除</button>
+<button onclick="c()">清除</button>
 <h1>計算結果:</h1>
 <output id="result"></output>
 </body>
